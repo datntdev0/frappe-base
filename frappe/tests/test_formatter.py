@@ -8,7 +8,7 @@ class TestFormatter(FrappeTestCase):
 		df = frappe._dict({"fieldname": "amount", "fieldtype": "Currency", "options": "currency"})
 
 		doc = frappe._dict({"amount": 5})
-		frappe.db.set_default("currency", "INR")
+		frappe.db.set_default("currency", "VND")
 
 		# if currency field is not passed then default currency should be used.
 		self.assertEqual(format(100000, df, doc, format="#,###.##"), "₹ 100,000.00")

@@ -118,7 +118,7 @@ window.format_number = function (v, format, decimals) {
 		for (var i = integer.length; i >= 0; i--) {
 			var l = replace_all(str, info.group_sep, "").length;
 			if (format == "#,##,###.##" && str.indexOf(",") != -1) {
-				// INR
+				// VND
 				group_position = 2;
 				l += 1;
 			}

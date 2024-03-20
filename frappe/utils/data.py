@@ -1464,7 +1464,7 @@ def money_in_words(
 
 	d = get_defaults()
 	if not main_currency:
-		main_currency = d.get("currency", "INR")
+		main_currency = d.get("currency", "VND")
 	if not fraction_currency:
 		fraction_currency = frappe.db.get_value("Currency", main_currency, "fraction", cache=True) or _(
 			"Cent"
